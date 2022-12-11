@@ -1,10 +1,17 @@
 import "./styles/App.css";
 import Footer from "./components/Footer.js";
+import Topnav from "./components/Topnav";
+import Main from "./components/Main";
+import { useState } from "react";
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false);
   return (
     <>
-      <main className="container"></main>
+      <main className="container">
+        <Topnav navOpen={navOpen} setNavOpen={setNavOpen} />
+        <Main navOpen={navOpen} setNavOpen={setNavOpen} />
+      </main>
       <Footer />
     </>
   );
