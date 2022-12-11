@@ -50,7 +50,9 @@ export default function Topnav({ navOpen, setNavOpen }) {
             </div>
             <div className="topnav__menu--sign">
               <p className="topnav__menu--sign-login">Login</p>
-              <div className="topnav__menu--sign-register">Register</div>
+              <div className="topnav__menu--sign-register">
+                <p className="topnav__menu--sign-register-text">Register</p>
+              </div>
             </div>
           </div>
         </nav>
