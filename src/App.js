@@ -4,7 +4,7 @@ import Footer from "./components/Footer.js";
 function App() {
   return (
     <>
-      <div className="container"></div>
+      <main className="container"></main>
       <Footer />
     </>
   );
