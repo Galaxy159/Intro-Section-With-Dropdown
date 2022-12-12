@@ -1,0 +1,63 @@
+.main {
+  margin-bottom: 9.4rem;
+  &__hero {
+    margin-bottom: 4.775rem;
+    &--img {
+      max-width: 100%;
+    }
+  }
+  &__content {
+    text-align: center;
+    &--headline {
+      font-weight: 700;
+      font-size: 3.6rem;
+      line-height: 4.2rem;
+      color: $color-black;
+      margin-bottom: 1.6rem;
+    }
+    &--text {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      color: $color-grey;
+      margin: 0 1.6rem 2.4rem;
+    }
+    &--cta {
+      height: 4.8rem;
+      width: 13.6rem;
+      background-color: $color-black;
+      border-radius: 1.5rem;
+      display: grid;
+      place-content: center;
+      margin: 0 auto 4.8rem;
+      &-text {
+        color: $color-white;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        letter-spacing: -0.222222px;
+      }
+    }
+
+    &--clients {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      justify-content: space-around;
+    }
+  }
+}
+
+// Clients icons heights
+
+.databiz-icon {
+  height: 1.436rem;
+}
+.audiophile-icon {
+  height: 2.6rem;
+}
+.meet-icon {
+  height: 1.436rem;
+}
+.maker-icon {
+  height: 1.723rem;
+}

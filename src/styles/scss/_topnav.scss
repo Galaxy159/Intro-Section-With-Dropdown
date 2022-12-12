@@ -1,0 +1,136 @@
+.topnav {
+  position: sticky;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: $color-grey;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    margin: 1.6rem 1.6rem 2.4rem;
+  }
+
+  &__logo {
+    &--img {
+    }
+  }
+
+  &__icon {
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    height: 2.4rem;
+  }
+
+  &__menu {
+    margin-bottom: 3.2rem;
+    &--container {
+      background-color: white;
+      height: 100vh;
+      width: 24rem;
+      position: fixed;
+      top: 0;
+      right: -24rem;
+      padding: 7.8rem 0 0 2.4rem;
+      transition: all 0.4s ease-in-out;
+    }
+    &--item {
+      cursor: pointer;
+      margin-bottom: 1.6rem;
+    }
+
+    &--features {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 1.7rem;
+
+      &-arrow {
+        &-img {
+          transition: all 0.2s;
+        }
+      }
+      &-menu {
+        gap: 1.6rem;
+        margin-bottom: 2.4rem;
+        padding-left: 2.4rem;
+        display: none;
+        &-item {
+          display: grid;
+          grid-template-columns: repeat(2, max-content);
+          gap: 1.6rem;
+          align-content: center;
+          cursor: pointer;
+
+          &-icon {
+            display: grid;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    &--company {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 1.7rem;
+
+      &-arrow {
+        &-img {
+          transition: all 0.2s;
+        }
+      }
+
+      &-menu {
+        gap: 1.6rem;
+        margin-bottom: 2.4rem;
+        padding-left: 2.4rem;
+        display: none;
+
+        &-item {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--careers {
+      &-text {
+      }
+    }
+
+    &--about {
+      &-text {
+      }
+    }
+
+    &--sign {
+      text-align: center;
+      margin-left: -2.4rem;
+      &-login {
+      }
+      &-register {
+        height: 4.2rem;
+        width: 19.5rem;
+        border: 1.5px solid $color-grey;
+        border-radius: 1.4rem;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+        &-text {
+        }
+      }
+    }
+  }
+}
+
+.showNav {
+  right: 0;
+}
+
+.arrow-open {
+  transform: rotate(180deg);
+}
+
+.show {
+  display: grid;
+}

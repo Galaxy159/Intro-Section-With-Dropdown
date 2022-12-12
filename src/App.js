@@ -1,6 +1,6 @@
 import "./styles/App.css";
 import Footer from "./components/Footer.js";
-import Topnav from "./components/Topnav";
+import Topnav from "./components/topnav/Topnav";
 import Main from "./components/Main";
 import { useState } from "react";
 

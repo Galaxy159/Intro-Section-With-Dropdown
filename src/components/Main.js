@@ -31,31 +31,23 @@ export default function Main() {
           <div className="main__content--clients">
             <div className="main__content--clients-client">
               <img
-                src={clientAudiophile}
-                alt="Audiophile icon"
-                className="main__content--clients-client-img"
-              />
-            </div>
-            <div className="main__content--clients-client">
-              <img
                 src={clientDatabiz}
                 alt="Databiz icon"
-                className="main__content--clients-client-img"
+                className="databiz-icon"
               />
             </div>
             <div className="main__content--clients-client">
               <img
-                src={clientMaker}
-                alt="Maker icon"
-                className="main__content--clients-client-img"
+                src={clientAudiophile}
+                alt="Audiophile icon"
+                className="audiophile-icon"
               />
             </div>
             <div className="main__content--clients-client">
-              <img
-                src={clientMeet}
-                alt="Meet icon"
-                className="main__content--clients-client-img"
-              />
+              <img src={clientMeet} alt="Meet icon" className="meet-icon" />
+            </div>
+            <div className="main__content--clients-client">
+              <img src={clientMaker} alt="Maker icon" className="maker-icon" />
             </div>
           </div>
         </div>
