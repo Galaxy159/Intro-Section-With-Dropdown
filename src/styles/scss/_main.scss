@@ -1,5 +1,6 @@
 .main {
   margin-bottom: 9.4rem;
+  z-index: 1;
   &__hero {
     margin-bottom: 4.775rem;
     &--img {
@@ -30,6 +31,7 @@
       display: grid;
       place-content: center;
       margin: 0 auto 4.8rem;
+      cursor: pointer;
       &-text {
         color: $color-white;
         font-weight: 700;

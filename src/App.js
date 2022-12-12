@@ -10,9 +10,13 @@ function App() {
     <>
       <main className="container">
         <Topnav navOpen={navOpen} setNavOpen={setNavOpen} />
-        <Main navOpen={navOpen} setNavOpen={setNavOpen} />
+        <Main />
       </main>
       <Footer />
+      <div
+        className={`overlay ${!navOpen && "hide"}`}
+        onClick={() => navOpen && setNavOpen((prev) => !prev)}
+      ></div>
     </>
   );
 }
