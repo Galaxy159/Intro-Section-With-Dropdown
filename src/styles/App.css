@@ -156,6 +156,13 @@ body {
   line-height: 2.6rem;
   letter-spacing: -0.222222px;
 }
+@media (min-width: 768px) {
+  .main__content--cta-text {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.25px;
+  }
+}
 .main__content--clients {
   display: grid;
   grid-template-columns: repeat(4, -webkit-max-content);

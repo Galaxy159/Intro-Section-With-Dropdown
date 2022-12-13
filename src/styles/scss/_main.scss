@@ -88,6 +88,12 @@
         font-size: 1.6rem;
         line-height: 2.6rem;
         letter-spacing: -0.222222px;
+
+        @include respond(desktop) {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+          letter-spacing: -0.25px;
+        }
       }
     }
 
