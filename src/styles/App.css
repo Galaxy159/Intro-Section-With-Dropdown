@@ -134,6 +134,12 @@ body {
   color: #fafafa;
   transition: all 0.2s;
 }
+@media (min-width: 768px) {
+  .main__content--cta {
+    height: 5.6rem;
+    width: 16.3rem;
+  }
+}
 .main__content--cta:hover {
   background-color: white;
   color: #141414;

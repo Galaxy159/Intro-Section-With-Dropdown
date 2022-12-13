@@ -70,6 +70,10 @@
       color: $color-white;
       transition: all 0.2s;
 
+      @include respond(desktop) {
+        height: 5.6rem;
+        width: 16.3rem;
+      }
       &:hover {
         background-color: white;
         color: $color-black;
