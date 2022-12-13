@@ -5,11 +5,33 @@
   line-height: 2.6rem;
   color: $color-grey;
   z-index: 1;
+
+  @include respond(desktop) {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
     padding: 1.6rem 1.6rem 2.4rem;
+
+    @include respond(desktop) {
+      justify-content: start;
+      grid-template-columns: max-content 1fr;
+      align-items: center;
+      gap: 6rem;
+      padding: 2.1rem 4rem 6.7rem;
+    }
+  }
+
+  &__logo {
+    @include respond(desktop) {
+      display: grid;
+      align-items: center;
+    }
   }
 
   &__icon {
@@ -17,10 +39,23 @@
     z-index: 2;
     cursor: pointer;
     height: 2.4rem;
+
+    @include respond(desktop) {
+      display: none;
+    }
   }
 
   &__menu {
     margin-bottom: 3.2rem;
+    @include respond(desktop) {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      align-items: center;
+
+      gap: 4rem;
+      margin: 0;
+    }
+
     &--container {
       background-color: white;
       height: 100vh;
@@ -31,16 +66,42 @@
       padding: 7.8rem 0 0 2.4rem;
       transition: all 0.4s ease-in-out;
       z-index: 1;
+
+      @include respond(desktop) {
+        position: relative;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+      }
     }
     &--item {
       cursor: pointer;
       margin-bottom: 1.6rem;
+
+      &:hover {
+        color: $color-black;
+      }
+
+      @include respond(desktop) {
+        margin: 0;
+      }
     }
 
     &--features {
       display: grid;
       grid-template-columns: repeat(2, max-content);
       gap: 1.7rem;
+      position: relative;
+
+      stroke: $color-grey;
+      &:hover {
+        stroke: $color-black;
+      }
 
       &-arrow {
         &-img {
@@ -52,6 +113,17 @@
         margin-bottom: 2.4rem;
         padding-left: 2.4rem;
         display: none;
+
+        @include respond(desktop) {
+          position: absolute;
+          margin: 0;
+          padding: 2.4rem;
+          background-color: white;
+          border-radius: 1rem;
+          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.149126);
+          top: 5rem;
+          left: -6rem;
+        }
         &-item {
           display: grid;
           grid-template-columns: repeat(2, max-content);
@@ -71,6 +143,10 @@
       display: grid;
       grid-template-columns: repeat(2, max-content);
       gap: 1.7rem;
+      stroke: $color-grey;
+      &:hover {
+        stroke: $color-black;
+      }
 
       &-arrow {
         &-img {
@@ -84,6 +160,15 @@
         padding-left: 2.4rem;
         display: none;
 
+        @include respond(desktop) {
+          position: absolute;
+          background-color: white;
+          border-radius: 1rem;
+          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.149126);
+          top: 5rem;
+          padding: 2.4rem;
+        }
+
         &-item {
           cursor: pointer;
         }
@@ -94,6 +179,14 @@
       text-align: center;
       margin-left: -2.4rem;
 
+      @include respond(desktop) {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 4rem;
+        align-items: center;
+      }
+
       &-register {
         height: 4.2rem;
         width: 19.5rem;
@@ -102,6 +195,14 @@
         display: grid;
         place-content: center;
         margin: 0 auto;
+
+        &:hover {
+          border: 1.5px solid $color-black;
+        }
+
+        @include respond(desktop) {
+          width: 10.4rem;
+        }
       }
     }
   }

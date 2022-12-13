@@ -1,20 +1,49 @@
 .main {
   margin-bottom: 9.4rem;
   z-index: 1;
+  overflow: hidden;
+
+  @include respond(desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: end;
+    justify-content: space-between;
+    margin: 0 auto 13rem;
+    max-width: 114.5rem;
+  }
   &__hero {
     margin-bottom: 4.775rem;
+    @include respond(desktop) {
+      grid-column: 2 / 3;
+      margin: 0;
+    }
     &--img {
       max-width: 100%;
+      @include respond(desktop) {
+        max-width: 48rem;
+      }
     }
   }
   &__content {
     text-align: center;
+    @include respond(desktop) {
+      grid-row: 1 / 2;
+      text-align: left;
+      max-width: 53rem;
+    }
     &--headline {
       font-weight: 700;
       font-size: 3.6rem;
       line-height: 4.2rem;
       color: $color-black;
       margin-bottom: 1.6rem;
+
+      @include respond(desktop) {
+        font-size: 8rem;
+        line-height: 8rem;
+        letter-spacing: -1.11111px;
+        margin-bottom: 4.8rem;
+      }
     }
     &--text {
       font-weight: 500;
@@ -22,6 +51,12 @@
       line-height: 2.6rem;
       color: $color-grey;
       margin: 0 1.6rem 2.4rem;
+      @include respond(desktop) {
+        margin: 0 0 5.1rem 0;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        max-width: 44.5rem;
+      }
     }
     &--cta {
       height: 4.8rem;
@@ -32,8 +67,19 @@
       place-content: center;
       margin: 0 auto 4.8rem;
       cursor: pointer;
+      color: $color-white;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: white;
+        color: $color-black;
+        border: 1px solid $color-black;
+      }
+
+      @include respond(desktop) {
+        margin: 0 0 10.8rem;
+      }
       &-text {
-        color: $color-white;
         font-weight: 700;
         font-size: 1.6rem;
         line-height: 2.6rem;
@@ -45,6 +91,11 @@
       display: grid;
       grid-template-columns: repeat(4, max-content);
       justify-content: space-around;
+
+      @include respond(desktop) {
+        justify-content: start;
+        gap: 4rem;
+      }
     }
   }
 }
@@ -53,13 +104,25 @@
 
 .databiz-icon {
   height: 1.436rem;
+  @include respond(desktop) {
+    height: 2rem;
+  }
 }
 .audiophile-icon {
   height: 2.6rem;
+  @include respond(desktop) {
+    height: 3.59rem;
+  }
 }
 .meet-icon {
   height: 1.436rem;
+  @include respond(desktop) {
+    height: 2rem;
+  }
 }
 .maker-icon {
   height: 1.723rem;
+  @include respond(desktop) {
+    height: 2.4rem;
+  }
 }

@@ -6,10 +6,25 @@ import { useState } from "react";
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
+  const [featuresClicked, setFeaturesClicked] = useState(false);
+  const [companyClicked, setCompanyClicked] = useState(false);
+
+  function closeMenus() {
+    featuresClicked && setFeaturesClicked(false);
+    companyClicked && setCompanyClicked(false);
+  }
+
   return (
     <>
-      <main className="container">
-        <Topnav navOpen={navOpen} setNavOpen={setNavOpen} />
+      <main className="container" onClick={closeMenus}>
+        <Topnav
+          navOpen={navOpen}
+          setNavOpen={setNavOpen}
+          featuresClicked={featuresClicked}
+          setFeaturesClicked={setFeaturesClicked}
+          companyClicked={companyClicked}
+          setCompanyClicked={setCompanyClicked}
+        />
         <Main />
       </main>
       <Footer />

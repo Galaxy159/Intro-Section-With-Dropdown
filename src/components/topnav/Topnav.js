@@ -1,18 +1,20 @@
 import logo from "../../images/logo.svg";
 import menuClose from "../../images/icon-close-menu.svg";
 import menuOpen from "../../images/icon-menu.svg";
-import arrowDown from "../../images/icon-arrow-down.svg";
 import calendar from "../../images/icon-calendar.svg";
 import todo from "../../images/icon-todo.svg";
 import reminders from "../../images/icon-reminders.svg";
 import planning from "../../images/icon-planning.svg";
 import Feature from "./Feature";
-import { useState } from "react";
 
-export default function Topnav({ navOpen, setNavOpen }) {
-  const [featuresClicked, setFeaturesClicked] = useState(false);
-  const [companyClicked, setCompanyClicked] = useState(false);
-
+export default function Topnav({
+  navOpen,
+  setNavOpen,
+  featuresClicked,
+  setFeaturesClicked,
+  companyClicked,
+  setCompanyClicked,
+}) {
   const features = [
     {
       text: "Todo List",
@@ -42,6 +44,8 @@ export default function Topnav({ navOpen, setNavOpen }) {
 
   function handleNavClick() {
     setNavOpen((prev) => !prev);
+    setCompanyClicked(false);
+    setFeaturesClicked(false);
   }
 
   return (
@@ -67,13 +71,16 @@ export default function Topnav({ navOpen, setNavOpen }) {
                 >
                   <p className="topnav__menu--features-text">Features</p>
                   <div className="topnav__menu--features-arrow">
-                    <img
-                      src={arrowDown}
-                      alt="Open\Close arrow"
+                    <svg
                       className={`topnav__menu--features-arrow-img ${
                         featuresClicked && "arrow-open"
                       }`}
-                    />
+                      width="10"
+                      height="6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path strokeWidth="1.5" fill="none" d="m1 5 4-4 4 4" />
+                    </svg>
                   </div>
                 </div>
                 <div
@@ -97,13 +104,16 @@ export default function Topnav({ navOpen, setNavOpen }) {
                 >
                   <p className="topnav__menu--company-text">Company</p>
                   <div className="topnav__menu--company-arrow">
-                    <img
-                      src={arrowDown}
-                      alt="Open\Close arrow"
+                    <svg
                       className={`topnav__menu--company-arrow-img ${
                         companyClicked && "arrow-open"
                       }`}
-                    />
+                      width="10"
+                      height="6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path strokeWidth="1.5" fill="none" d="m1 5 4-4 4 4" />
+                    </svg>
                   </div>
                 </div>
                 <div
